@@ -1,7 +1,7 @@
 # Hallucination via Manifold Distance Project
 # Makefile for common tasks
 
-.PHONY: help install setup test run-analysis multi-model clustering setup-llama run-notebook clean
+.PHONY: help install setup test run-analysis multi-model clustering setup-llama run-notebook clean llama-analysis check-models
 
 # Default target
 help:
@@ -12,6 +12,8 @@ help:
 	@echo "  run-analysis - Run full embedding analysis (10 prompts)"
 	@echo "  multi-model - Run multi-model comparison (100+ prompts)"
 	@echo "  clustering  - Run detailed clustering analysis"
+	@echo "  llama-analysis - Run LLaMA embedding analysis (50 prompts)"
+	@echo "  check-models - Check which models are downloaded"
 	@echo "  setup-llama - Setup LLaMA access instructions"
 	@echo "  run-notebook - Start Jupyter notebook server"
 	@echo "  clean       - Clean generated files"
@@ -33,13 +35,38 @@ test:
 run-analysis:
 	source .venv/bin/activate && cd src && python embedding_analysis.py
 
-# Run multi-model comparison analysis
+# Run multi-model comparison analysis (only if not already done)
 multi-model:
-	source .venv/bin/activate && cd src && python multi_model_analysis.py
+	@if [ ! -f data/multi_model_analysis.json ]; then \
+		echo "Running multi-model analysis..."; \
+		source .venv/bin/activate && cd src && python multi_model_analysis.py; \
+	else \
+		echo "Multi-model analysis already completed. Results in data/multi_model_analysis.json"; \
+	fi
 
-# Run detailed clustering analysis
+# Run detailed clustering analysis (only if not already done)
 clustering:
-	source .venv/bin/activate && cd src && python detailed_clustering_analysis.py
+	@if [ ! -f data/detailed_clustering_analysis.json ]; then \
+		echo "Running detailed clustering analysis..."; \
+		source .venv/bin/activate && cd src && python detailed_clustering_analysis.py; \
+	else \
+		echo "Detailed clustering analysis already completed. Results in data/detailed_clustering_analysis.json"; \
+	fi
+
+# Run LLaMA analysis (only if not already done)
+llama-analysis:
+	@if [ ! -f data/llama_simple_analysis.json ]; then \
+		echo "Running LLaMA analysis..."; \
+		source .venv/bin/activate && cd src && python llama_simple_analysis.py; \
+	else \
+		echo "LLaMA analysis already completed. Results in data/llama_simple_analysis.json"; \
+	fi
+
+# Check which models are downloaded
+check-models:
+	@echo "Checking downloaded models..."
+	@echo "LLaMA-2-7b-hf: $$(if [ -d ~/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-hf ]; then echo "✅ Downloaded ($$(du -sh ~/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-hf | cut -f1))"; else echo "❌ Not downloaded"; fi)"
+	@echo "Other models: $$(ls ~/.cache/huggingface/hub/ | grep -E "(bert|roberta|distil)" | wc -l) models downloaded"
 
 # Setup LLaMA access
 setup-llama:
