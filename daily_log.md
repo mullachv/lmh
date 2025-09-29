@@ -1,0 +1,200 @@
+## Day 1: Sept 27, 2025
+
+- Created folder structure and README
+- Jotted hypotheses and potential methods in `notes.md`
+- Installed dependencies (openai, umap-learn, scikit-learn)
+- Decided on Python for prototyping, will use Cursor for rapid code iteration
+
+following avoids using the default pip settings in `/Users/vsm/.config/pip/pip.config`:
+```
+$ source .venv/bin/activate && pip install --index-url https://pypi.org/simple/ openai umap-learn scikit-learn matplotlib tqdm
+```
+
+**Tomorrow:** Create prompt dataset and embed using OpenAI or HF embeddings.
+
+## Day 2: Sept 28, 2025
+
+- ✅ Successfully extracted embeddings using sentence-transformers (all-MiniLM-L6-v2)
+- ✅ Generated comprehensive analysis with UMAP visualization, clustering, and distance metrics
+- ✅ Discovered interesting clustering patterns in embedding space
+
+### Key Findings:
+1. **Embedding Clusters Identified:**
+   - **Cluster 0**: Nonsensical/Impossible questions (angels, hobbits, triangle sounds, invisibility potions)
+   - **Cluster 1**: Complex academic content (Borsuk-Ulam theorem)  
+   - **Cluster 2**: Factual questions (capital of France, US president, Napoleon/Bitcoin)
+
+2. **Distance Analysis:**
+   - Cosine distances range from 0.67 to 1.10
+   - Nonsensical prompts cluster together (lower distances within cluster)
+   - Academic content appears isolated (high distance from other clusters)
+
+3. **Manifold Hypothesis Support:**
+   - Clear separation between different types of content
+   - Nonsensical prompts form a distinct cluster
+   - Suggests embedding space has structured manifolds
+
+**Next:** Implement distance-based hallucination scoring and test on more diverse prompts.
+
+## Day 3: Sept 29, 2025
+
+- ✅ **Expanded dataset to 130 diverse prompts** covering multiple categories (factual, nonsensical, academic, technical, etc.)
+- ✅ **Created comprehensive multi-model analysis** comparing 6 different embedding models
+- ✅ **Discovered RoBERTa-base is the best performer** with 0.120 silhouette score (vs 0.034-0.083 for others)
+- ✅ **Implemented DBSCAN clustering analysis** for better manifold detection
+- ✅ **Set up LLaMA access request** (pending approval at HuggingFace)
+- ✅ **Updated project infrastructure** with Makefile and requirements.txt
+
+### Major Discoveries:
+1. **Model Performance Ranking:**
+   - **RoBERTa-base**: 0.120 silhouette, 0.030 avg distance (BEST)
+   - **BERT-base**: 0.083 silhouette, 0.309 avg distance
+   - **DistilBERT**: 0.083 silhouette, 0.236 avg distance
+   - **Sentence Transformers**: 0.034-0.036 silhouette (weaker clustering)
+
+2. **DBSCAN Analysis Results:**
+   - **High noise percentage** (95% at eps=1.492) suggests well-distributed embeddings
+   - **No clear dense clusters** found - supports hypothesis that embedding space is more uniform
+   - **2 small clusters** found with high silhouette score (0.549) but mostly noise points
+
+3. **Infrastructure Improvements:**
+   - **Makefile created** with commands: `make multi-model`, `make clustering`, `make setup-llama`
+   - **130 diverse prompts** covering: factual, nonsensical, academic, technical, philosophical, programming, geography, instructions, future predictions
+   - **Model storage location**: `~/.cache/huggingface/hub/` (~5.3GB total)
+
+### Key Insights:
+- **RoBERTa embeddings show best clustering structure** for manifold analysis
+- **DBSCAN reveals mostly noise points** - suggests embedding space is well-distributed rather than having tight clusters
+- **LLaMA access pending** - will provide comparison with current best model (RoBERTa)
+
+**Next:** Wait for LLaMA approval, then compare LLaMA vs RoBERTa embeddings for manifold structure.
+
+## Day 4: Sept 28, 2025
+
+- ✅ **Successfully set up LLaMA-2-7b-hf access** and authentication
+- ✅ **Completed comprehensive LLaMA embedding analysis** on 50 prompts
+- ✅ **Fixed JSON serialization issues** with NumPy arrays
+- ✅ **Created efficient Makefile with conditional execution** to avoid re-running completed analyses
+- ✅ **Analyzed cosine distance distributions** and embedding spread patterns
+
+### LLaMA Analysis Results:
+1. **Model Performance:**
+   - **LLaMA-2-7b-hf**: 0.105 silhouette score, 0.342 avg cosine distance, 4096 dimensions
+   - **Ranking**: RoBERTa (0.120) > LLaMA (0.105) > BERT/DistilBERT (0.083)
+   - **Model size**: 13GB downloaded to `~/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-hf`
+
+2. **Cosine Distance Analysis:**
+   - **Total pairwise distances**: 1,225 (50 prompts)
+   - **Distance range**: 0.066 to 0.947 (very wide spread)
+   - **Mean distance**: 0.342 (34% angle difference)
+   - **Standard deviation**: 0.141 (high variability)
+   - **Example pairs**: Factual questions (0.180), Factual vs Scientific (0.266)
+
+3. **Embedding Characteristics:**
+   - **Uniform spread in UMAP**: No clear clustering structure
+   - **DBSCAN results**: 0 clusters, 50 noise points (100% noise)
+   - **High-dimensional space**: 4096 dimensions vs 768 for other models
+   - **Well-distributed embeddings**: Good separation between different prompt types
+
+### Technical Improvements:
+1. **JSON Serialization Fix:**
+   - **Problem**: `TypeError: Object of type ndarray is not JSON serializable`
+   - **Solution**: Convert all NumPy arrays to Python lists using `.tolist()`
+   - **Result**: Successfully saved 5.5MB analysis file
+
+2. **Efficient Makefile:**
+   - **New commands**: `make llama-analysis`, `make check-models`
+   - **Conditional execution**: Only runs analyses if output files don't exist
+   - **Model checking**: Shows downloaded models and sizes
+   - **Virtual environment**: Properly sources `.venv/bin/activate` for all commands
+
+3. **Analysis Files Created:**
+   - `data/llama_simple_analysis.json` (5.5MB) - Complete LLaMA results
+   - `data/llama_simple_analysis.png` (353KB) - LLaMA visualizations
+   - `data/cosine_distance_analysis.png` - Distance distribution analysis
+
+### Key Insights:
+- **LLaMA creates well-separated embeddings** with no obvious clustering structure
+- **High variability in cosine distances** (0.066-0.947) explains uniform UMAP spread
+- **RoBERTa still best for clustering** (0.120 vs 0.105 silhouette)
+- **LLaMA's 4096 dimensions** provide more nuanced distinctions
+- **Perfect for outlier detection** - well-distributed space ideal for identifying hallucinations
+
+### Model Comparison Summary:
+| Model | Silhouette | Avg Distance | Dimension | Best For |
+|-------|------------|--------------|-----------|----------|
+| **RoBERTa-base** | **0.120** | 0.030 | 768 | **Clustering** |
+| **LLaMA-2-7b** | **0.105** | 0.342 | 4096 | **Separation** |
+| BERT-base | 0.083 | 0.309 | 768 | General |
+| DistilBERT | 0.083 | 0.236 | 768 | General |
+
+**Next:** Implement distance-based hallucination scoring using both RoBERTa (clustering) and LLaMA (separation) approaches.
+
+## Day 4 (Continued): Sept 28, 2025 - Evening
+
+- ✅ **Analyzed embedding normalization patterns** across all models
+- ✅ **Created comprehensive model dimensions reference** with performance metrics
+- ✅ **Built utility script** for easy model dimension lookup
+- ✅ **Updated Makefile** with new `model-dims` command
+- ✅ **Clarified Sentence Transformers vs raw Transformers** distinction
+
+### Embedding Normalization Analysis:
+1. **Normalized to Unit Sphere (L2 norm = 1.0):**
+   - **all-MiniLM-L6-v2**: 1.0 ± 0.0
+   - **all-mpnet-base-v2**: 1.0 ± 0.0
+   - **all-distilroberta-v1**: 1.0 ± 0.0
+
+2. **Not Normalized (variable L2 norms):**
+   - **bert-base-uncased**: 9.4 ± 0.4
+   - **roberta-base**: 12.4 ± 0.4
+   - **distilbert-base-uncased**: 8.4 ± 0.4
+   - **meta-llama/Llama-2-7b-hf**: 63.8 ± 6.5
+
+### Key Technical Insights:
+1. **Sentence Transformers Framework:**
+   - **Library**: `sentence-transformers` (UKP Lab, TU Darmstadt)
+   - **Purpose**: Optimized for sentence-level similarity tasks
+   - **Feature**: Automatic L2 normalization to unit sphere
+   - **Models**: all-MiniLM-L6-v2, all-mpnet-base-v2, all-distilroberta-v1
+
+2. **Raw Transformer Models:**
+   - **Library**: `transformers` (HuggingFace)
+   - **Purpose**: General-purpose language understanding
+   - **Feature**: No normalization, variable vector magnitudes
+   - **Models**: BERT, RoBERTa, DistilBERT, LLaMA
+
+3. **Normalization Impact on Performance:**
+   - **Normalized models**: Weaker clustering (0.034-0.036 silhouette)
+   - **Non-normalized models**: Better clustering (0.083-0.120 silhouette)
+   - **Reason**: Magnitude variation provides additional discriminative information
+
+### Infrastructure Improvements:
+1. **Model Dimensions Reference:**
+   - **File**: `data/model_embedding_dimensions.json` (2.7KB)
+   - **Content**: Dimensions, normalization, performance rankings, metadata
+   - **Utility**: `src/model_dimensions.py` for easy lookup
+
+2. **New Makefile Commands:**
+   - **`make model-dims`**: Show complete model summary with normalization info
+   - **Usage**: `python model_dimensions.py <model_name>` for specific lookups
+
+3. **Storage Analysis:**
+   - **Current approach**: JSON storage (23MB total)
+   - **FAISS consideration**: Overkill for current dataset size
+   - **Recommendation**: Stick with JSON for analysis-focused workflow
+
+### Updated Model Reference:
+| Model | Dimension | Normalized | Silhouette | Avg Distance | Best For |
+|-------|-----------|------------|------------|--------------|----------|
+| **RoBERTa-base** | 768D | ❌ No (12.4) | **0.120** | 0.030 | **Clustering** |
+| **LLaMA-2-7b** | 4096D | ❌ No (63.8) | 0.105 | 0.342 | **Separation** |
+| BERT-base | 768D | ❌ No (9.4) | 0.083 | 0.309 | General |
+| DistilBERT | 768D | ❌ No (8.4) | 0.083 | 0.236 | General |
+| all-MiniLM-L6-v2 | 384D | ✅ Yes (1.0) | 0.034 | 0.884 | Efficiency |
+| all-mpnet-base-v2 | 768D | ✅ Yes (1.0) | 0.036 | 0.870 | Efficiency |
+| all-distilroberta-v1 | 768D | ✅ Yes (1.0) | 0.034 | 0.858 | Efficiency |
+
+### Key Discovery:
+**The normalization difference explains why RoBERTa performs better for clustering - the magnitude variation provides additional discriminative information beyond just angular relationships!**
+
+**Next:** Implement distance-based hallucination scoring, leveraging both normalized (Sentence Transformers) and non-normalized (RoBERTa/LLaMA) approaches for comprehensive manifold analysis.

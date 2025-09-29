@@ -14,6 +14,7 @@ help:
 	@echo "  clustering  - Run detailed clustering analysis"
 	@echo "  llama-analysis - Run LLaMA embedding analysis (50 prompts)"
 	@echo "  check-models - Check which models are downloaded"
+	@echo "  model-dims - Show model embedding dimensions and performance"
 	@echo "  setup-llama - Setup LLaMA access instructions"
 	@echo "  run-notebook - Start Jupyter notebook server"
 	@echo "  clean       - Clean generated files"
@@ -67,6 +68,10 @@ check-models:
 	@echo "Checking downloaded models..."
 	@echo "LLaMA-2-7b-hf: $$(if [ -d ~/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-hf ]; then echo "✅ Downloaded ($$(du -sh ~/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-hf | cut -f1))"; else echo "❌ Not downloaded"; fi)"
 	@echo "Other models: $$(ls ~/.cache/huggingface/hub/ | grep -E "(bert|roberta|distil)" | wc -l) models downloaded"
+
+# Show model embedding dimensions and performance
+model-dims:
+	source .venv/bin/activate && cd src && python model_dimensions.py
 
 # Setup LLaMA access
 setup-llama:
