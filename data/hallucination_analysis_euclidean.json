@@ -1,0 +1,273 @@
+{
+  "model_name": "meta-llama/Llama-2-7b-hf",
+  "method": "euclidean",
+  "total_prompts": 50,
+  "scores": [
+    0.21508368849754333,
+    0.2773706614971161,
+    0.2701251208782196,
+    0.3016367256641388,
+    0.2871285080909729,
+    0.3052447438240051,
+    0.30455002188682556,
+    0.20668892562389374,
+    0.23252268135547638,
+    0.24581614136695862,
+    0.3274630904197693,
+    0.2214066982269287,
+    0.3045928478240967,
+    0.24004173278808594,
+    0.26408761739730835,
+    0.25618115067481995,
+    0.29683366417884827,
+    0.22769992053508759,
+    0.19700443744659424,
+    0.2279200553894043,
+    0.20820343494415283,
+    0.20143938064575195,
+    0.24370932579040527,
+    0.28202733397483826,
+    0.2081768810749054,
+    0.20048853754997253,
+    0.2108653336763382,
+    0.21867072582244873,
+    0.2106364667415619,
+    0.24250435829162598,
+    0.22031012177467346,
+    0.19714906811714172,
+    0.20796164870262146,
+    0.29661011695861816,
+    0.2128874510526657,
+    0.20714890956878662,
+    0.21270966529846191,
+    0.20738723874092102,
+    0.24117474257946014,
+    0.3079065680503845,
+    0.23240745067596436,
+    0.20379403233528137,
+    0.2679496705532074,
+    0.20417141914367676,
+    0.2064591348171234,
+    0.19991910457611084,
+    0.21212705969810486,
+    0.2158965766429901,
+    0.21150851249694824,
+    0.20813623070716858
+  ],
+  "statistics": {
+    "mean": 0.2381946986913681,
+    "std": 0.037377818501579986,
+    "min": 0.19700443744659424,
+    "max": 0.3274630904197693,
+    "median": 0.2208584100008011,
+    "percentile_25": 0.20814639329910278,
+    "percentile_75": 0.26698415726423264,
+    "percentile_90": 0.3019280552864075,
+    "percentile_95": 0.3049513906240463,
+    "above_threshold": 0,
+    "below_threshold": 50,
+    "threshold": 0.5
+  },
+  "prompts_with_scores": [
+    {
+      "prompt": "What is the capital of France?",
+      "score": 0.21508368849754333
+    },
+    {
+      "prompt": "Who is the president of the United States?",
+      "score": 0.2773706614971161
+    },
+    {
+      "prompt": "How many moons does Mars have?",
+      "score": 0.2701251208782196
+    },
+    {
+      "prompt": "How many angels can dance on the head of a pin?",
+      "score": 0.3016367256641388
+    },
+    {
+      "prompt": "What did Napoleon think of Bitcoin?",
+      "score": 0.2871285080909729
+    },
+    {
+      "prompt": "Translate 'cat' into Mandarin.",
+      "score": 0.3052447438240051
+    },
+    {
+      "prompt": "Explain the Borsuk-Ulam theorem.",
+      "score": 0.30455002188682556
+    },
+    {
+      "prompt": "How do you make an invisibility potion?",
+      "score": 0.20668892562389374
+    },
+    {
+      "prompt": "What is the average height of hobbits?",
+      "score": 0.23252268135547638
+    },
+    {
+      "prompt": "What color is the sound of a triangle?",
+      "score": 0.24581614136695862
+    },
+    {
+      "prompt": "What is 2 + 2?",
+      "score": 0.3274630904197693
+    },
+    {
+      "prompt": "What is the speed of light?",
+      "score": 0.2214066982269287
+    },
+    {
+      "prompt": "Who wrote Romeo and Juliet?",
+      "score": 0.3045928478240967
+    },
+    {
+      "prompt": "What is photosynthesis?",
+      "score": 0.24004173278808594
+    },
+    {
+      "prompt": "How do you bake a chocolate cake?",
+      "score": 0.26408761739730835
+    },
+    {
+      "prompt": "What is the largest planet in our solar system?",
+      "score": 0.25618115067481995
+    },
+    {
+      "prompt": "Who painted the Mona Lisa?",
+      "score": 0.29683366417884827
+    },
+    {
+      "prompt": "What is the chemical symbol for gold?",
+      "score": 0.22769992053508759
+    },
+    {
+      "prompt": "How do you tie a tie?",
+      "score": 0.19700443744659424
+    },
+    {
+      "prompt": "What is the smallest country in the world?",
+      "score": 0.2279200553894043
+    },
+    {
+      "prompt": "What is the meaning of life?",
+      "score": 0.20820343494415283
+    },
+    {
+      "prompt": "How do you build a time machine?",
+      "score": 0.20143938064575195
+    },
+    {
+      "prompt": "What does a unicorn eat for breakfast?",
+      "score": 0.24370932579040527
+    },
+    {
+      "prompt": "How many dimensions are there in string theory?",
+      "score": 0.28202733397483826
+    },
+    {
+      "prompt": "What is the color of Wednesday?",
+      "score": 0.2081768810749054
+    },
+    {
+      "prompt": "How do you catch a cloud?",
+      "score": 0.20048853754997253
+    },
+    {
+      "prompt": "What is the sound of one hand clapping?",
+      "score": 0.2108653336763382
+    },
+    {
+      "prompt": "How do you divide by zero?",
+      "score": 0.21867072582244873
+    },
+    {
+      "prompt": "What is the taste of the number seven?",
+      "score": 0.2106364667415619
+    },
+    {
+      "prompt": "How do you fold a four-dimensional cube?",
+      "score": 0.24250435829162598
+    },
+    {
+      "prompt": "What is machine learning?",
+      "score": 0.22031012177467346
+    },
+    {
+      "prompt": "How does a neural network work?",
+      "score": 0.19714906811714172
+    },
+    {
+      "prompt": "What is quantum computing?",
+      "score": 0.20796164870262146
+    },
+    {
+      "prompt": "Explain the theory of relativity.",
+      "score": 0.29661011695861816
+    },
+    {
+      "prompt": "What is blockchain technology?",
+      "score": 0.2128874510526657
+    },
+    {
+      "prompt": "How do you train a deep learning model?",
+      "score": 0.20714890956878662
+    },
+    {
+      "prompt": "What is the difference between AI and ML?",
+      "score": 0.21270966529846191
+    },
+    {
+      "prompt": "How does a transformer model work?",
+      "score": 0.20738723874092102
+    },
+    {
+      "prompt": "What is reinforcement learning?",
+      "score": 0.24117474257946014
+    },
+    {
+      "prompt": "Explain gradient descent.",
+      "score": 0.3079065680503845
+    },
+    {
+      "prompt": "What is the weather like today?",
+      "score": 0.23240745067596436
+    },
+    {
+      "prompt": "How do you make coffee?",
+      "score": 0.20379403233528137
+    },
+    {
+      "prompt": "What time is it?",
+      "score": 0.2679496705532074
+    },
+    {
+      "prompt": "How do you change a tire?",
+      "score": 0.20417141914367676
+    },
+    {
+      "prompt": "What is the recipe for pasta?",
+      "score": 0.2064591348171234
+    },
+    {
+      "prompt": "How do you plant a garden?",
+      "score": 0.19991910457611084
+    },
+    {
+      "prompt": "What is the best way to study?",
+      "score": 0.21212705969810486
+    },
+    {
+      "prompt": "How do you write a resume?",
+      "score": 0.2158965766429901
+    },
+    {
+      "prompt": "What is the process of making bread?",
+      "score": 0.21150851249694824
+    },
+    {
+      "prompt": "How do you organize a closet?",
+      "score": 0.20813623070716858
+    }
+  ]
+}

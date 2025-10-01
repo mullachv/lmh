@@ -1,7 +1,7 @@
 # Hallucination via Manifold Distance Project
 # Makefile for common tasks
 
-.PHONY: help install setup test run-analysis multi-model clustering setup-llama run-notebook clean llama-analysis check-models
+.PHONY: help install setup test run-analysis multi-model clustering setup-llama run-notebook clean llama-analysis check-models hallucination-scoring apply-hallucination
 
 # Default target
 help:
@@ -15,6 +15,8 @@ help:
 	@echo "  llama-analysis - Run LLaMA embedding analysis (50 prompts)"
 	@echo "  check-models - Check which models are downloaded"
 	@echo "  model-dims - Show model embedding dimensions and performance"
+	@echo "  hallucination-scoring - Test hallucination scoring module"
+	@echo "  apply-hallucination - Apply hallucination scoring to LLaMA analysis"
 	@echo "  setup-llama - Setup LLaMA access instructions"
 	@echo "  run-notebook - Start Jupyter notebook server"
 	@echo "  clean       - Clean generated files"
@@ -86,6 +88,16 @@ clean:
 	rm -f data/*.json data/*.png
 	rm -rf __pycache__ src/__pycache__ notebooks/__pycache__
 	find . -name "*.pyc" -delete
+
+# Test hallucination scoring module
+hallucination-scoring:
+	@echo "Testing hallucination scoring module..."
+	@source .venv/bin/activate && cd src && python hallucination_scoring.py
+
+# Apply hallucination scoring to LLaMA analysis
+apply-hallucination:
+	@echo "Applying hallucination scoring to LLaMA analysis..."
+	@source .venv/bin/activate && cd src && python apply_hallucination_scoring.py
 
 # Quick development cycle: clean, test, and show results
 dev: clean test

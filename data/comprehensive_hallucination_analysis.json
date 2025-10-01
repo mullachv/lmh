@@ -1,0 +1,197 @@
+{
+  "model": "meta-llama/Llama-2-7b-hf",
+  "total_embeddings": 50,
+  "embedding_dimension": 4096,
+  "methods_comparison": [
+    {
+      "method": "cosine",
+      "mean": 0.142464237511158,
+      "std": 0.05803699357055976,
+      "above_threshold": 0,
+      "percentile_95": 0.25282749906182284
+    },
+    {
+      "method": "faiss_cosine",
+      "mean": 0.14246426194906234,
+      "std": 0.05803699387555496,
+      "above_threshold": 0,
+      "percentile_95": 0.25282756164669984
+    },
+    {
+      "method": "euclidean",
+      "mean": 0.2381946986913681,
+      "std": 0.037377818501579986,
+      "above_threshold": 0,
+      "percentile_95": 0.3049513906240463
+    },
+    {
+      "method": "faiss_l2",
+      "mean": 1.0,
+      "std": 0.0,
+      "above_threshold": 50,
+      "percentile_95": 1.0
+    }
+  ],
+  "detailed_results": {
+    "cosine": {
+      "statistics": {
+        "mean": 0.142464237511158,
+        "std": 0.05803699357055976,
+        "min": 0.085263691842556,
+        "max": 0.3050077557563782,
+        "median": 0.11818163469433784,
+        "percentile_25": 0.10100162215530872,
+        "percentile_75": 0.1772659868001938,
+        "percentile_90": 0.2295308664441109,
+        "percentile_95": 0.25282749906182284,
+        "above_threshold": 0,
+        "below_threshold": 50,
+        "threshold": 0.5
+      },
+      "top_hallucination_indices": [
+        23,
+        39,
+        4,
+        14,
+        16,
+        33,
+        12,
+        10,
+        6,
+        5
+      ],
+      "bottom_hallucination_indices": [
+        18,
+        30,
+        41,
+        32,
+        20,
+        28,
+        25,
+        46,
+        34,
+        31
+      ]
+    },
+    "euclidean": {
+      "statistics": {
+        "mean": 0.2381946986913681,
+        "std": 0.037377818501579986,
+        "min": 0.19700443744659424,
+        "max": 0.3274630904197693,
+        "median": 0.2208584100008011,
+        "percentile_25": 0.20814639329910278,
+        "percentile_75": 0.26698415726423264,
+        "percentile_90": 0.3019280552864075,
+        "percentile_95": 0.3049513906240463,
+        "above_threshold": 0,
+        "below_threshold": 50,
+        "threshold": 0.5
+      },
+      "top_hallucination_indices": [
+        23,
+        4,
+        33,
+        16,
+        3,
+        6,
+        12,
+        5,
+        39,
+        10
+      ],
+      "bottom_hallucination_indices": [
+        18,
+        31,
+        45,
+        25,
+        21,
+        41,
+        43,
+        44,
+        7,
+        35
+      ]
+    },
+    "faiss_cosine": {
+      "statistics": {
+        "mean": 0.14246426194906234,
+        "std": 0.05803699387555496,
+        "min": 0.08526383340358734,
+        "max": 0.3050077557563782,
+        "median": 0.11818162724375725,
+        "percentile_25": 0.10100168734788895,
+        "percentile_75": 0.17726605385541916,
+        "percentile_90": 0.22953098714351655,
+        "percentile_95": 0.25282756164669984,
+        "above_threshold": 0,
+        "below_threshold": 50,
+        "threshold": 0.5
+      },
+      "top_hallucination_indices": [
+        23,
+        39,
+        4,
+        14,
+        16,
+        33,
+        12,
+        10,
+        6,
+        5
+      ],
+      "bottom_hallucination_indices": [
+        18,
+        30,
+        41,
+        32,
+        20,
+        28,
+        25,
+        46,
+        34,
+        31
+      ]
+    },
+    "faiss_l2": {
+      "statistics": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0,
+        "percentile_25": 1.0,
+        "percentile_75": 1.0,
+        "percentile_90": 1.0,
+        "percentile_95": 1.0,
+        "above_threshold": 50,
+        "below_threshold": 0,
+        "threshold": 0.5
+      },
+      "top_hallucination_indices": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        12,
+        49
+      ],
+      "bottom_hallucination_indices": [
+        0,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    }
+  }
+}

@@ -197,4 +197,43 @@ $ source .venv/bin/activate && pip install --index-url https://pypi.org/simple/ 
 ### Key Discovery:
 **The normalization difference explains why RoBERTa performs better for clustering - the magnitude variation provides additional discriminative information beyond just angular relationships!**
 
+## Day 5: Sept 30, 2025
+
+### **Hallucination Scoring Implementation**
+- **Core Function**: `src/hallucination_scoring.py` - Comprehensive distance-based scoring
+- **Methods**: cosine, euclidean, manhattan, faiss_cosine, faiss_l2
+- **Features**: Batch processing, statistical analysis, JSON serialization
+- **FAISS Integration**: Added `faiss-cpu` for efficient similarity search
+
+### **Applied to LLaMA Analysis**
+- **Script**: `src/apply_hallucination_scoring.py`
+- **Results**: 50 LLaMA embeddings analyzed with 4 different methods
+- **Key Findings**:
+  - **Cosine/FAISS Cosine**: Mean 0.142, Std 0.058 (best discrimination)
+  - **Euclidean**: Mean 0.238, Std 0.037 (moderate discrimination)
+  - **FAISS L2**: All scores = 1.0 (saturated, not useful)
+
+### **Method Comparison Results**
+- **Best Method**: faiss_cosine (highest std: 0.058)
+- **Top Hallucination Candidates**: 
+  - "Translate 'cat' into Mandarin" (0.3050)
+  - "Explain the Borsuk-Ulam theorem" (0.2988)
+  - "What is 2 + 2?" (0.2629)
+- **Least Likely Hallucinations**:
+  - "How do you tie a tie?" (0.0853)
+  - "What is machine learning?" (0.0862)
+  - "How do you make coffee?" (0.0870)
+
+### **Generated Files**
+- **Analysis Files**: 4 method-specific JSON files (6.6KB each)
+- **Comprehensive**: `comprehensive_hallucination_analysis.json` (3.9KB)
+- **Visualization**: `hallucination_comparison.png` (305KB)
+- **Makefile**: Added `hallucination-scoring` and `apply-hallucination` targets
+
+### **Technical Insights**
+- **Distance Metrics**: Cosine similarity most effective for 4096D LLaMA embeddings
+- **Normalization Impact**: LLaMA's non-normalized embeddings work well with cosine distance
+- **Threshold Analysis**: No embeddings above 0.5 threshold (all scores < 0.5)
+- **Discrimination Power**: Cosine methods show best separation between embeddings
+
 **Next:** Implement distance-based hallucination scoring, leveraging both normalized (Sentence Transformers) and non-normalized (RoBERTa/LLaMA) approaches for comprehensive manifold analysis.
