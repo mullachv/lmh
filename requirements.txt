@@ -1,13 +1,28 @@
-openai
+# Core dependencies
 numpy
 scikit-learn
-umap-learn
 matplotlib
-tqdm
-jupyter
+seaborn
+scipy
+
+# Embedding and ML models
 transformers
 torch
-accelerate
 sentence-transformers
+accelerate
+
+# Clustering and dimensionality reduction
+umap-learn
+hdbscan
+
+# Efficient similarity search
 faiss-cpu
 
+# Utilities
+tqdm
+jupyter
+
+# Testing
+pytest
+pytest-cov
+pytest-mock

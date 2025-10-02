@@ -1,104 +1,100 @@
 # Hallucination via Manifold Distance Project
-# Makefile for common tasks
+# Clean Makefile for unsupervised hallucination detection
 
-.PHONY: help install setup test run-analysis multi-model clustering setup-llama run-notebook clean llama-analysis check-models hallucination-scoring apply-hallucination
+.PHONY: help install setup clean unsupervised-manifold consistency-scoring cross-model-agreement unsupervised-pipeline
 
 # Default target
 help:
-	@echo "Available targets:"
-	@echo "  install     - Install all dependencies"
-	@echo "  setup       - Create virtual environment and install deps"
-	@echo "  test        - Run embedding analysis test (10 prompts)"
-	@echo "  run-analysis - Run full embedding analysis (10 prompts)"
-	@echo "  multi-model - Run multi-model comparison (100+ prompts)"
-	@echo "  clustering  - Run detailed clustering analysis"
-	@echo "  llama-analysis - Run LLaMA embedding analysis (50 prompts)"
-	@echo "  check-models - Check which models are downloaded"
-	@echo "  model-dims - Show model embedding dimensions and performance"
-	@echo "  hallucination-scoring - Test hallucination scoring module"
-	@echo "  apply-hallucination - Apply hallucination scoring to LLaMA analysis"
-	@echo "  setup-llama - Setup LLaMA access instructions"
-	@echo "  run-notebook - Start Jupyter notebook server"
-	@echo "  clean       - Clean generated files"
+	@echo "Unsupervised Hallucination Detection - Available Commands:"
+	@echo ""
+	@echo "SETUP:"
+	@echo "  setup       - Create virtual environment and install dependencies"
+	@echo "  install     - Install/update all dependencies"
+	@echo ""
+	@echo "UNSUPERVISED METHODS:"
+	@echo "  unsupervised-manifold - Run density-based manifold detection"
+	@echo "  consistency-scoring   - Run consistency-based scoring"
+	@echo "  cross-model-agreement - Run cross-model agreement detection"
+	@echo "  unsupervised-pipeline - Run complete unsupervised pipeline"
+	@echo ""
+	@echo "UTILITIES:"
+	@echo "  clean       - Clean generated files and cache"
+	@echo "  help        - Show this help message"
 
-# Install dependencies
-install:
-	source .venv/bin/activate && pip install --index-url https://pypi.org/simple/ -r requirements.txt
+# =============================================================================
+# SETUP & INSTALLATION
+# =============================================================================
 
 # Setup virtual environment and install dependencies
 setup:
 	python -m venv .venv
 	@echo "Virtual environment created. Run 'make install' to install dependencies"
 
-# Run the embedding analysis test script
+# Install dependencies
+install:
+	source .venv/bin/activate && pip install --index-url https://pypi.org/simple/ -r requirements.txt
+
+# =============================================================================
+# UNSUPERVISED HALLUCINATION DETECTION
+# =============================================================================
+
+# Run density-based manifold detection
+unsupervised-manifold:
+	@echo "Running unsupervised manifold detection..."
+	@source .venv/bin/activate && cd src && python unsupervised_manifold_detection.py
+
+# Run consistency-based scoring
+consistency-scoring:
+	@echo "Running consistency-based scoring..."
+	@source .venv/bin/activate && cd src && python consistency_scoring.py
+
+# Run cross-model agreement detection
+cross-model-agreement:
+	@echo "Running cross-model agreement detection..."
+	@source .venv/bin/activate && cd src && python cross_model_agreement.py
+
+# Run complete unsupervised pipeline
+unsupervised-pipeline:
+	@echo "Running complete unsupervised hallucination detection pipeline..."
+	@source .venv/bin/activate && cd src && python unsupervised_hallucination_pipeline.py
+
+# =============================================================================
+# TESTING
+# =============================================================================
+
+# Run all tests
 test:
-	source .venv/bin/activate && cd src && python embedding_analysis.py
+	@echo "Running all tests..."
+	@source .venv/bin/activate && python -m pytest tests/ -v
 
-# Run the full embedding analysis with visualizations
-run-analysis:
-	source .venv/bin/activate && cd src && python embedding_analysis.py
+# Run only unit tests
+test-unit:
+	@echo "Running unit tests..."
+	@source .venv/bin/activate && python -m pytest tests/ -v -m "not slow and not integration"
 
-# Run multi-model comparison analysis (only if not already done)
-multi-model:
-	@if [ ! -f data/multi_model_analysis.json ]; then \
-		echo "Running multi-model analysis..."; \
-		source .venv/bin/activate && cd src && python multi_model_analysis.py; \
-	else \
-		echo "Multi-model analysis already completed. Results in data/multi_model_analysis.json"; \
-	fi
+# Run only integration tests
+test-integration:
+	@echo "Running integration tests..."
+	@source .venv/bin/activate && python -m pytest tests/ -v -m "integration"
 
-# Run detailed clustering analysis (only if not already done)
-clustering:
-	@if [ ! -f data/detailed_clustering_analysis.json ]; then \
-		echo "Running detailed clustering analysis..."; \
-		source .venv/bin/activate && cd src && python detailed_clustering_analysis.py; \
-	else \
-		echo "Detailed clustering analysis already completed. Results in data/detailed_clustering_analysis.json"; \
-	fi
+# Run tests with coverage
+test-coverage:
+	@echo "Running tests with coverage..."
+	@source .venv/bin/activate && python -m pytest tests/ --cov=src --cov-report=html --cov-report=term
 
-# Run LLaMA analysis (only if not already done)
-llama-analysis:
-	@if [ ! -f data/llama_simple_analysis.json ]; then \
-		echo "Running LLaMA analysis..."; \
-		source .venv/bin/activate && cd src && python llama_simple_analysis.py; \
-	else \
-		echo "LLaMA analysis already completed. Results in data/llama_simple_analysis.json"; \
-	fi
+# Run specific test file
+test-manifold:
+	@echo "Running manifold detection tests..."
+	@source .venv/bin/activate && python -m pytest tests/test_manifold_detection.py -v
 
-# Check which models are downloaded
-check-models:
-	@echo "Checking downloaded models..."
-	@echo "LLaMA-2-7b-hf: $$(if [ -d ~/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-hf ]; then echo "✅ Downloaded ($$(du -sh ~/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-hf | cut -f1))"; else echo "❌ Not downloaded"; fi)"
-	@echo "Other models: $$(ls ~/.cache/huggingface/hub/ | grep -E "(bert|roberta|distil)" | wc -l) models downloaded"
-
-# Show model embedding dimensions and performance
-model-dims:
-	source .venv/bin/activate && cd src && python model_dimensions.py
-
-# Setup LLaMA access
-setup-llama:
-	source .venv/bin/activate && cd src && python setup_llama_access.py
-
-# Start Jupyter notebook server
-run-notebook:
-	source .venv/bin/activate && jupyter notebook notebooks/
+# =============================================================================
+# UTILITIES
+# =============================================================================
 
 # Clean generated files
 clean:
 	rm -f data/*.json data/*.png
 	rm -rf __pycache__ src/__pycache__ notebooks/__pycache__
+	rm -rf htmlcov/ .coverage
 	find . -name "*.pyc" -delete
-
-# Test hallucination scoring module
-hallucination-scoring:
-	@echo "Testing hallucination scoring module..."
-	@source .venv/bin/activate && cd src && python hallucination_scoring.py
-
-# Apply hallucination scoring to LLaMA analysis
-apply-hallucination:
-	@echo "Applying hallucination scoring to LLaMA analysis..."
-	@source .venv/bin/activate && cd src && python apply_hallucination_scoring.py
-
-# Quick development cycle: clean, test, and show results
-dev: clean test
-	@echo "Analysis complete. Check data/ directory for results."
+	@echo "Cleaned generated files and cache"
