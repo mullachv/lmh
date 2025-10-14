@@ -389,6 +389,23 @@ class UnsupervisedHallucinationPipeline:
             "combined_scores": self.combined_scores
         }
         
+        # Convert numpy types to Python types for JSON serialization
+        def convert_numpy_types(obj):
+            if isinstance(obj, np.integer):
+                return int(obj)
+            elif isinstance(obj, np.floating):
+                return float(obj)
+            elif isinstance(obj, np.ndarray):
+                return obj.tolist()
+            elif isinstance(obj, dict):
+                return {key: convert_numpy_types(value) for key, value in obj.items()}
+            elif isinstance(obj, list):
+                return [convert_numpy_types(item) for item in obj]
+            return obj
+        
+        # Convert all numpy types
+        output_data = convert_numpy_types(output_data)
+        
         with open(output_path, 'w') as f:
             json.dump(output_data, f, indent=2)
         

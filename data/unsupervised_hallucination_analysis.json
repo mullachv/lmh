@@ -1,0 +1,1416 @@
+{
+  "timestamp": "2025-10-05T00:08:40.566328",
+  "method": "unsupervised_hallucination_detection",
+  "parameters": {
+    "manifold_params": {
+      "min_cluster_size": 3,
+      "min_samples": 2
+    },
+    "consistency_params": {
+      "n_responses": 5,
+      "temperature": 0.7
+    },
+    "agreement_params": {}
+  },
+  "individual_analyses": {
+    "manifold_analysis": {
+      "clustering_stats": {
+        "n_clusters": 2,
+        "n_noise_points": 27,
+        "noise_percentage": 54.0,
+        "silhouette_score": 0.16558579570013798,
+        "cluster_sizes": {
+          "cluster_0": 11,
+          "cluster_1": 12
+        },
+        "min_cluster_size": 3,
+        "min_samples": 2
+      },
+      "scoring_results": {
+        "scores": [
+          {
+            "prompt": "Explain the Borsuk-Ulam theorem.",
+            "manifold_distance": 0.44404787077250285,
+            "rank": 1
+          },
+          {
+            "prompt": "Translate 'cat' into Mandarin.",
+            "manifold_distance": 0.44025051089430856,
+            "rank": 2
+          },
+          {
+            "prompt": "Who wrote Romeo and Juliet?",
+            "manifold_distance": 0.39802667195600083,
+            "rank": 3
+          },
+          {
+            "prompt": "How many angels can dance on the head of a pin?",
+            "manifold_distance": 0.3672518154762868,
+            "rank": 4
+          },
+          {
+            "prompt": "What did Napoleon think of Bitcoin?",
+            "manifold_distance": 0.34161357501215983,
+            "rank": 5
+          },
+          {
+            "prompt": "Explain gradient descent.",
+            "manifold_distance": 0.3375847701468925,
+            "rank": 6
+          },
+          {
+            "prompt": "What is 2 + 2?",
+            "manifold_distance": 0.33733630384586155,
+            "rank": 7
+          },
+          {
+            "prompt": "How many moons does Mars have?",
+            "manifold_distance": 0.320851846433856,
+            "rank": 8
+          },
+          {
+            "prompt": "What is the largest planet in our solar system?",
+            "manifold_distance": 0.3131644315257125,
+            "rank": 9
+          },
+          {
+            "prompt": "How do you bake a chocolate cake?",
+            "manifold_distance": 0.3106186254893599,
+            "rank": 10
+          },
+          {
+            "prompt": "Who painted the Mona Lisa?",
+            "manifold_distance": 0.308779030152327,
+            "rank": 11
+          },
+          {
+            "prompt": "Explain the theory of relativity.",
+            "manifold_distance": 0.3014749216143582,
+            "rank": 12
+          },
+          {
+            "prompt": "Who is the president of the United States?",
+            "manifold_distance": 0.30084563360785765,
+            "rank": 13
+          },
+          {
+            "prompt": "How many dimensions are there in string theory?",
+            "manifold_distance": 0.27041265687382876,
+            "rank": 14
+          },
+          {
+            "prompt": "What does a unicorn eat for breakfast?",
+            "manifold_distance": 0.205960443368706,
+            "rank": 15
+          },
+          {
+            "prompt": "What is the weather like today?",
+            "manifold_distance": 0.17682402640359585,
+            "rank": 16
+          },
+          {
+            "prompt": "What is reinforcement learning?",
+            "manifold_distance": 0.17500217577657484,
+            "rank": 17
+          },
+          {
+            "prompt": "How do you fold a four-dimensional cube?",
+            "manifold_distance": 0.1738551696535502,
+            "rank": 18
+          },
+          {
+            "prompt": "What is the smallest country in the world?",
+            "manifold_distance": 0.17354140514220306,
+            "rank": 19
+          },
+          {
+            "prompt": "What is photosynthesis?",
+            "manifold_distance": 0.17299618896063385,
+            "rank": 20
+          },
+          {
+            "prompt": "What color is the sound of a triangle?",
+            "manifold_distance": 0.1683869525868017,
+            "rank": 21
+          },
+          {
+            "prompt": "What is the chemical symbol for gold?",
+            "manifold_distance": 0.16614477350203827,
+            "rank": 22
+          },
+          {
+            "prompt": "What time is it?",
+            "manifold_distance": 0.16543487129600387,
+            "rank": 23
+          },
+          {
+            "prompt": "What is the average height of hobbits?",
+            "manifold_distance": 0.16011943206426682,
+            "rank": 24
+          },
+          {
+            "prompt": "What is the capital of France?",
+            "manifold_distance": 0.13373721490771617,
+            "rank": 25
+          },
+          {
+            "prompt": "What is the process of making bread?",
+            "manifold_distance": 0.12978142164400253,
+            "rank": 26
+          },
+          {
+            "prompt": "What is blockchain technology?",
+            "manifold_distance": 0.10926042199666142,
+            "rank": 27
+          },
+          {
+            "prompt": "How do you divide by zero?",
+            "manifold_distance": 0.10703963410889317,
+            "rank": 28
+          },
+          {
+            "prompt": "How do you organize a closet?",
+            "manifold_distance": 0.10688062513236984,
+            "rank": 29
+          },
+          {
+            "prompt": "What is machine learning?",
+            "manifold_distance": 0.10670229390603192,
+            "rank": 30
+          },
+          {
+            "prompt": "How do you write a resume?",
+            "manifold_distance": 0.10338258520737098,
+            "rank": 31
+          },
+          {
+            "prompt": "What is the recipe for pasta?",
+            "manifold_distance": 0.10073920110810919,
+            "rank": 32
+          },
+          {
+            "prompt": "How does a transformer model work?",
+            "manifold_distance": 0.100423936168902,
+            "rank": 33
+          },
+          {
+            "prompt": "How do you make an invisibility potion?",
+            "manifold_distance": 0.0950160800510923,
+            "rank": 34
+          },
+          {
+            "prompt": "What is the taste of the number seven?",
+            "manifold_distance": 0.08743565430466838,
+            "rank": 35
+          },
+          {
+            "prompt": "How does a neural network work?",
+            "manifold_distance": 0.08609972754361894,
+            "rank": 36
+          },
+          {
+            "prompt": "What is the sound of one hand clapping?",
+            "manifold_distance": 0.08180413759899707,
+            "rank": 37
+          },
+          {
+            "prompt": "How do you train a deep learning model?",
+            "manifold_distance": 0.07883349407446205,
+            "rank": 38
+          },
+          {
+            "prompt": "What is the color of Wednesday?",
+            "manifold_distance": 0.07740495382081458,
+            "rank": 39
+          },
+          {
+            "prompt": "What is quantum computing?",
+            "manifold_distance": 0.07703117834476159,
+            "rank": 40
+          },
+          {
+            "prompt": "What is the speed of light?",
+            "manifold_distance": 0.0741944093418686,
+            "rank": 41
+          },
+          {
+            "prompt": "What is the difference between AI and ML?",
+            "manifold_distance": 0.07330888962555382,
+            "rank": 42
+          },
+          {
+            "prompt": "How do you make coffee?",
+            "manifold_distance": 0.07043809604837237,
+            "rank": 43
+          },
+          {
+            "prompt": "How do you plant a garden?",
+            "manifold_distance": 0.06966440067631408,
+            "rank": 44
+          },
+          {
+            "prompt": "How do you change a tire?",
+            "manifold_distance": 0.06666183005596416,
+            "rank": 45
+          },
+          {
+            "prompt": "How do you catch a cloud?",
+            "manifold_distance": 0.06640563417937129,
+            "rank": 46
+          },
+          {
+            "prompt": "How do you tie a tie?",
+            "manifold_distance": 0.061191648849910796,
+            "rank": 47
+          },
+          {
+            "prompt": "What is the best way to study?",
+            "manifold_distance": 0.05694723187969675,
+            "rank": 48
+          },
+          {
+            "prompt": "How do you build a time machine?",
+            "manifold_distance": 0.05442110963209035,
+            "rank": 49
+          },
+          {
+            "prompt": "What is the meaning of life?",
+            "manifold_distance": 0.05177595203485941,
+            "rank": 50
+          }
+        ],
+        "mean_distance": 0.1751421172959632,
+        "std_distance": 0.11391931369337499,
+        "min_distance": 0.05177595203485941,
+        "max_distance": 0.44404787077250285
+      },
+      "method": "density_based_manifolds"
+    },
+    "consistency_analysis": {
+      "individual_results": [
+        {
+          "prompt": "Explain the Borsuk-Ulam theorem.",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.016178768996126726,
+          "std_pairwise_distance": 0.00030460257451474026,
+          "max_pairwise_distance": 0.016731225730561072,
+          "min_pairwise_distance": 0.015804019369913935,
+          "embedding_variance": 3.1599158195559686e-06,
+          "embedding_entropy": 8.087267397326126,
+          "consistency_score": 0.9838212310038733
+        },
+        {
+          "prompt": "Translate 'cat' into Mandarin.",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.015578627475457785,
+          "std_pairwise_distance": 0.00036805451882332164,
+          "max_pairwise_distance": 0.016036001466437688,
+          "min_pairwise_distance": 0.015069598903708181,
+          "embedding_variance": 3.0427006788003795e-06,
+          "embedding_entropy": 8.082659383566604,
+          "consistency_score": 0.9844213725245422
+        },
+        {
+          "prompt": "What does a unicorn eat for breakfast?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.015153174255891277,
+          "std_pairwise_distance": 0.00041056933655932577,
+          "max_pairwise_distance": 0.0157352940501847,
+          "min_pairwise_distance": 0.01448948227724578,
+          "embedding_variance": 2.9596043468537045e-06,
+          "embedding_entropy": 8.082161116610145,
+          "consistency_score": 0.9848468257441088
+        },
+        {
+          "prompt": "How do you bake a chocolate cake?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.014889029143247023,
+          "std_pairwise_distance": 0.0002586878679534651,
+          "max_pairwise_distance": 0.01520796726215301,
+          "min_pairwise_distance": 0.014278416455582255,
+          "embedding_variance": 2.9080135045404653e-06,
+          "embedding_entropy": 8.097945555813677,
+          "consistency_score": 0.9851109708567529
+        },
+        {
+          "prompt": "How do you organize a closet?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.013686439846800558,
+          "std_pairwise_distance": 0.0002420725164595697,
+          "max_pairwise_distance": 0.014197726985180958,
+          "min_pairwise_distance": 0.013317096047919974,
+          "embedding_variance": 2.6731327825783172e-06,
+          "embedding_entropy": 8.08164091219207,
+          "consistency_score": 0.9863135601531995
+        },
+        {
+          "prompt": "What did Napoleon think of Bitcoin?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.012919167294722955,
+          "std_pairwise_distance": 0.0003207294619900005,
+          "max_pairwise_distance": 0.0133259176658862,
+          "min_pairwise_distance": 0.01240942925898092,
+          "embedding_variance": 2.523274862250624e-06,
+          "embedding_entropy": 8.089326315530677,
+          "consistency_score": 0.987080832705277
+        },
+        {
+          "prompt": "What is the average height of hobbits?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.012609292849795306,
+          "std_pairwise_distance": 0.0002549809678768524,
+          "max_pairwise_distance": 0.013083892495347138,
+          "min_pairwise_distance": 0.012180737186245127,
+          "embedding_variance": 2.462752509725566e-06,
+          "embedding_entropy": 8.098095601501347,
+          "consistency_score": 0.9873907071502047
+        },
+        {
+          "prompt": "What is reinforcement learning?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.012534935513361623,
+          "std_pairwise_distance": 0.00032172023455225376,
+          "max_pairwise_distance": 0.013090470228357076,
+          "min_pairwise_distance": 0.011885044775344134,
+          "embedding_variance": 2.448229592453517e-06,
+          "embedding_entropy": 8.094277880620194,
+          "consistency_score": 0.9874650644866384
+        },
+        {
+          "prompt": "How do you fold a four-dimensional cube?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.012503763550734714,
+          "std_pairwise_distance": 0.00022849279232562208,
+          "max_pairwise_distance": 0.012809828041701277,
+          "min_pairwise_distance": 0.011971903797757033,
+          "embedding_variance": 2.4421413185029724e-06,
+          "embedding_entropy": 8.091261793271645,
+          "consistency_score": 0.9874962364492653
+        },
+        {
+          "prompt": "How do you make an invisibility potion?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.012384178406164237,
+          "std_pairwise_distance": 0.00021143655484209348,
+          "max_pairwise_distance": 0.012722218533633867,
+          "min_pairwise_distance": 0.012033802562727791,
+          "embedding_variance": 2.4187848449538913e-06,
+          "embedding_entropy": 8.090734408203602,
+          "consistency_score": 0.9876158215938358
+        },
+        {
+          "prompt": "Explain the theory of relativity.",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.011747230019218924,
+          "std_pairwise_distance": 0.000220988432939862,
+          "max_pairwise_distance": 0.01216182619519568,
+          "min_pairwise_distance": 0.011343549544395093,
+          "embedding_variance": 2.294380863128665e-06,
+          "embedding_entropy": 8.092173857921786,
+          "consistency_score": 0.988252769980781
+        },
+        {
+          "prompt": "How many moons does Mars have?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.011719141455699522,
+          "std_pairwise_distance": 0.0002765857583126953,
+          "max_pairwise_distance": 0.012101629393167057,
+          "min_pairwise_distance": 0.01120055159301736,
+          "embedding_variance": 2.2888948155663234e-06,
+          "embedding_entropy": 8.087823097228608,
+          "consistency_score": 0.9882808585443005
+        },
+        {
+          "prompt": "What is the sound of one hand clapping?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.01155533369755687,
+          "std_pairwise_distance": 0.0002640941698518538,
+          "max_pairwise_distance": 0.011945257080314797,
+          "min_pairwise_distance": 0.011155414432485133,
+          "embedding_variance": 2.25690111280403e-06,
+          "embedding_entropy": 8.0952016432303,
+          "consistency_score": 0.9884446663024431
+        },
+        {
+          "prompt": "What is the recipe for pasta?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.011396336610326085,
+          "std_pairwise_distance": 0.00021803011762244794,
+          "max_pairwise_distance": 0.011788142433242,
+          "min_pairwise_distance": 0.011089344116803068,
+          "embedding_variance": 2.2258469942043966e-06,
+          "embedding_entropy": 8.092785943087653,
+          "consistency_score": 0.9886036633896739
+        },
+        {
+          "prompt": "How do you change a tire?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.011348455021264026,
+          "std_pairwise_distance": 0.00016541512632561173,
+          "max_pairwise_distance": 0.011716108413243886,
+          "min_pairwise_distance": 0.01114742297280813,
+          "embedding_variance": 2.2164951213406375e-06,
+          "embedding_entropy": 8.083040500175173,
+          "consistency_score": 0.988651544978736
+        },
+        {
+          "prompt": "How do you write a resume?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.011181781129413582,
+          "std_pairwise_distance": 0.0002520592562116385,
+          "max_pairwise_distance": 0.011557892781507095,
+          "min_pairwise_distance": 0.010790067387865476,
+          "embedding_variance": 2.1839416268386545e-06,
+          "embedding_entropy": 8.088449883480315,
+          "consistency_score": 0.9888182188705864
+        },
+        {
+          "prompt": "Who painted the Mona Lisa?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.01085922520417636,
+          "std_pairwise_distance": 0.00020561405971176018,
+          "max_pairwise_distance": 0.011136201399398304,
+          "min_pairwise_distance": 0.010488312237903585,
+          "embedding_variance": 2.1209424226906565e-06,
+          "embedding_entropy": 8.089120079645983,
+          "consistency_score": 0.9891407747958236
+        },
+        {
+          "prompt": "What is the difference between AI and ML?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.010813537923369022,
+          "std_pairwise_distance": 0.00016747847717217724,
+          "max_pairwise_distance": 0.011086293969071792,
+          "min_pairwise_distance": 0.010486619419639465,
+          "embedding_variance": 2.1120191256580558e-06,
+          "embedding_entropy": 8.091637908697344,
+          "consistency_score": 0.989186462076631
+        },
+        {
+          "prompt": "What is photosynthesis?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.010306453941524352,
+          "std_pairwise_distance": 0.00019986194737770338,
+          "max_pairwise_distance": 0.01056121308749347,
+          "min_pairwise_distance": 0.009924959489763352,
+          "embedding_variance": 2.012979285453978e-06,
+          "embedding_entropy": 8.089532684101819,
+          "consistency_score": 0.9896935460584757
+        },
+        {
+          "prompt": "Who wrote Romeo and Juliet?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.010257161422483608,
+          "std_pairwise_distance": 0.00024606787777792054,
+          "max_pairwise_distance": 0.01079765457789117,
+          "min_pairwise_distance": 0.009921091316823394,
+          "embedding_variance": 2.0033518403290392e-06,
+          "embedding_entropy": 8.08598477507455,
+          "consistency_score": 0.9897428385775164
+        },
+        {
+          "prompt": "How does a transformer model work?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.010177694627072709,
+          "std_pairwise_distance": 8.700314362136536e-05,
+          "max_pairwise_distance": 0.010340528011302252,
+          "min_pairwise_distance": 0.010070959074700236,
+          "embedding_variance": 1.987830981850093e-06,
+          "embedding_entropy": 8.090335997201585,
+          "consistency_score": 0.9898223053729273
+        },
+        {
+          "prompt": "What is the color of Wednesday?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.010131780824237824,
+          "std_pairwise_distance": 0.00017529469776381227,
+          "max_pairwise_distance": 0.010511631147166578,
+          "min_pairwise_distance": 0.009904519841766213,
+          "embedding_variance": 1.9788634422341474e-06,
+          "embedding_entropy": 8.091295466141656,
+          "consistency_score": 0.9898682191757622
+        },
+        {
+          "prompt": "What is 2 + 2?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.010073028125851823,
+          "std_pairwise_distance": 0.0001842788423166784,
+          "max_pairwise_distance": 0.010412675377283409,
+          "min_pairwise_distance": 0.009800184657842936,
+          "embedding_variance": 1.967388305830557e-06,
+          "embedding_entropy": 8.09132852101131,
+          "consistency_score": 0.9899269718741481
+        },
+        {
+          "prompt": "How do you train a deep learning model?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.010071629130197579,
+          "std_pairwise_distance": 0.0001606353444301851,
+          "max_pairwise_distance": 0.010336245171203018,
+          "min_pairwise_distance": 0.009776576842950635,
+          "embedding_variance": 1.9671150644917583e-06,
+          "embedding_entropy": 8.09140758804472,
+          "consistency_score": 0.9899283708698025
+        },
+        {
+          "prompt": "How many dimensions are there in string theory?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.00996526655453791,
+          "std_pairwise_distance": 0.0002507783327781692,
+          "max_pairwise_distance": 0.010334660895449765,
+          "min_pairwise_distance": 0.009492339659576854,
+          "embedding_variance": 1.9463411239331433e-06,
+          "embedding_entropy": 8.090496547597485,
+          "consistency_score": 0.9900347334454621
+        },
+        {
+          "prompt": "How does a neural network work?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.009640144974013587,
+          "std_pairwise_distance": 0.00017555987933921523,
+          "max_pairwise_distance": 0.009971621638103167,
+          "min_pairwise_distance": 0.009448399607124958,
+          "embedding_variance": 1.8828408152370125e-06,
+          "embedding_entropy": 8.099192625775114,
+          "consistency_score": 0.9903598550259864
+        },
+        {
+          "prompt": "What is the weather like today?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.009631658464434544,
+          "std_pairwise_distance": 0.0001575618630751579,
+          "max_pairwise_distance": 0.009908835232050772,
+          "min_pairwise_distance": 0.009366291761941814,
+          "embedding_variance": 1.8811832938348303e-06,
+          "embedding_entropy": 8.092333200881585,
+          "consistency_score": 0.9903683415355654
+        },
+        {
+          "prompt": "How do you build a time machine?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.009582054408623086,
+          "std_pairwise_distance": 0.0001344796729265911,
+          "max_pairwise_distance": 0.00980849379800286,
+          "min_pairwise_distance": 0.009254101408281423,
+          "embedding_variance": 1.8714950016842198e-06,
+          "embedding_entropy": 8.090165300719079,
+          "consistency_score": 0.9904179455913769
+        },
+        {
+          "prompt": "How do you plant a garden?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.0093921520959244,
+          "std_pairwise_distance": 0.0001594544716813621,
+          "max_pairwise_distance": 0.009597370653545156,
+          "min_pairwise_distance": 0.009137471698479671,
+          "embedding_variance": 1.8344047062352038e-06,
+          "embedding_entropy": 8.089613354438374,
+          "consistency_score": 0.9906078479040756
+        },
+        {
+          "prompt": "How do you catch a cloud?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.009362609085529106,
+          "std_pairwise_distance": 0.0001984391759789334,
+          "max_pairwise_distance": 0.00966005514021595,
+          "min_pairwise_distance": 0.008928452273893939,
+          "embedding_variance": 1.828634587017337e-06,
+          "embedding_entropy": 8.095481446775002,
+          "consistency_score": 0.9906373909144709
+        },
+        {
+          "prompt": "What is the chemical symbol for gold?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.009288831120738184,
+          "std_pairwise_distance": 0.00017979721099353922,
+          "max_pairwise_distance": 0.009673863409695782,
+          "min_pairwise_distance": 0.00904044550792038,
+          "embedding_variance": 1.8142248282691767e-06,
+          "embedding_entropy": 8.093997402765293,
+          "consistency_score": 0.9907111688792618
+        },
+        {
+          "prompt": "What is the smallest country in the world?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.00926435897968827,
+          "std_pairwise_distance": 0.0001589258378114761,
+          "max_pairwise_distance": 0.009545604726060253,
+          "min_pairwise_distance": 0.009050624605123958,
+          "embedding_variance": 1.80944511322034e-06,
+          "embedding_entropy": 8.087955606507611,
+          "consistency_score": 0.9907356410203118
+        },
+        {
+          "prompt": "What is the capital of France?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.009257154482794294,
+          "std_pairwise_distance": 0.00017505013020967662,
+          "max_pairwise_distance": 0.009542797986045515,
+          "min_pairwise_distance": 0.008908783667205933,
+          "embedding_variance": 1.808037984920713e-06,
+          "embedding_entropy": 8.097792714975498,
+          "consistency_score": 0.9907428455172057
+        },
+        {
+          "prompt": "What is the process of making bread?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.009199741240241888,
+          "std_pairwise_distance": 0.00013685155937944541,
+          "max_pairwise_distance": 0.009428711139263912,
+          "min_pairwise_distance": 0.008865798922630286,
+          "embedding_variance": 1.796824460984888e-06,
+          "embedding_entropy": 8.096467413743225,
+          "consistency_score": 0.9908002587597581
+        },
+        {
+          "prompt": "What is quantum computing?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008745672267819193,
+          "std_pairwise_distance": 9.337137070869345e-05,
+          "max_pairwise_distance": 0.008901685675248738,
+          "min_pairwise_distance": 0.00860733495786703,
+          "embedding_variance": 1.7081391148085353e-06,
+          "embedding_entropy": 8.092915501652985,
+          "consistency_score": 0.9912543277321808
+        },
+        {
+          "prompt": "Explain gradient descent.",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008614392025991147,
+          "std_pairwise_distance": 0.00011255746903719085,
+          "max_pairwise_distance": 0.008820223251144288,
+          "min_pairwise_distance": 0.008460440709185058,
+          "embedding_variance": 1.6824984425763954e-06,
+          "embedding_entropy": 8.08999370902915,
+          "consistency_score": 0.9913856079740089
+        },
+        {
+          "prompt": "How do you divide by zero?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008542726217886066,
+          "std_pairwise_distance": 8.958792493218661e-05,
+          "max_pairwise_distance": 0.008707318269818631,
+          "min_pairwise_distance": 0.008429557872287163,
+          "embedding_variance": 1.6685012144308712e-06,
+          "embedding_entropy": 8.09349209681524,
+          "consistency_score": 0.9914572737821139
+        },
+        {
+          "prompt": "What is the meaning of life?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.00844345700118022,
+          "std_pairwise_distance": 0.00021330063260249822,
+          "max_pairwise_distance": 0.008911240959136424,
+          "min_pairwise_distance": 0.008095889542626966,
+          "embedding_variance": 1.6491126955430002e-06,
+          "embedding_entropy": 8.089005983806878,
+          "consistency_score": 0.9915565429988198
+        },
+        {
+          "prompt": "How do you tie a tie?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008368197541326528,
+          "std_pairwise_distance": 0.0001512171583092212,
+          "max_pairwise_distance": 0.008733793002227652,
+          "min_pairwise_distance": 0.008156618058949405,
+          "embedding_variance": 1.6344135822903423e-06,
+          "embedding_entropy": 8.089998873048154,
+          "consistency_score": 0.9916318024586734
+        },
+        {
+          "prompt": "What is the largest planet in our solar system?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.00827552033977198,
+          "std_pairwise_distance": 0.00015408545877942963,
+          "max_pairwise_distance": 0.008524843528170178,
+          "min_pairwise_distance": 0.008068640460521248,
+          "embedding_variance": 1.616312566361721e-06,
+          "embedding_entropy": 8.082187772348918,
+          "consistency_score": 0.991724479660228
+        },
+        {
+          "prompt": "What is the best way to study?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008218322213037522,
+          "std_pairwise_distance": 0.00017019453021083905,
+          "max_pairwise_distance": 0.008478401318082751,
+          "min_pairwise_distance": 0.00792664809948429,
+          "embedding_variance": 1.6051410572339364e-06,
+          "embedding_entropy": 8.0885223614372,
+          "consistency_score": 0.9917816777869625
+        },
+        {
+          "prompt": "How do you make coffee?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008142099011789606,
+          "std_pairwise_distance": 0.00014655434581961057,
+          "max_pairwise_distance": 0.008345822310763862,
+          "min_pairwise_distance": 0.00791368791262026,
+          "embedding_variance": 1.5902537132402346e-06,
+          "embedding_entropy": 8.093202967176003,
+          "consistency_score": 0.9918579009882104
+        },
+        {
+          "prompt": "How many angels can dance on the head of a pin?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008047161730178321,
+          "std_pairwise_distance": 0.00022996802638120152,
+          "max_pairwise_distance": 0.008620886294972818,
+          "min_pairwise_distance": 0.007752146156379647,
+          "embedding_variance": 1.5717112754254257e-06,
+          "embedding_entropy": 8.089844905355356,
+          "consistency_score": 0.9919528382698217
+        },
+        {
+          "prompt": "What is blockchain technology?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.008001199025598382,
+          "std_pairwise_distance": 0.0001478832845337331,
+          "max_pairwise_distance": 0.008297410869027133,
+          "min_pairwise_distance": 0.007726157853431337,
+          "embedding_variance": 1.5627341846872019e-06,
+          "embedding_entropy": 8.089833372075132,
+          "consistency_score": 0.9919988009744016
+        },
+        {
+          "prompt": "What is the speed of light?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.007955765252019497,
+          "std_pairwise_distance": 0.0001738132927840619,
+          "max_pairwise_distance": 0.00824773239626142,
+          "min_pairwise_distance": 0.007613316822749239,
+          "embedding_variance": 1.5538604007850524e-06,
+          "embedding_entropy": 8.08130082875384,
+          "consistency_score": 0.9920442347479805
+        },
+        {
+          "prompt": "What is the taste of the number seven?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.007865815447414659,
+          "std_pairwise_distance": 0.00014406798376165927,
+          "max_pairwise_distance": 0.008034824186580192,
+          "min_pairwise_distance": 0.007631067370018285,
+          "embedding_variance": 1.5362920795732484e-06,
+          "embedding_entropy": 8.085069894204606,
+          "consistency_score": 0.9921341845525853
+        },
+        {
+          "prompt": "Who is the president of the United States?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.007829491763687468,
+          "std_pairwise_distance": 0.00015057030865043663,
+          "max_pairwise_distance": 0.008090317585363715,
+          "min_pairwise_distance": 0.007548140484438526,
+          "embedding_variance": 1.5291976100953106e-06,
+          "embedding_entropy": 8.089010712886093,
+          "consistency_score": 0.9921705082363126
+        },
+        {
+          "prompt": "What color is the sound of a triangle?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.007807852575645058,
+          "std_pairwise_distance": 0.00017022758414586,
+          "max_pairwise_distance": 0.008139207075542054,
+          "min_pairwise_distance": 0.0075606271420207705,
+          "embedding_variance": 1.5249712061806795e-06,
+          "embedding_entropy": 8.084753403701917,
+          "consistency_score": 0.9921921474243549
+        },
+        {
+          "prompt": "What time is it?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.007713550818798542,
+          "std_pairwise_distance": 0.00014039178918043237,
+          "max_pairwise_distance": 0.00792929350446192,
+          "min_pairwise_distance": 0.007526475713680036,
+          "embedding_variance": 1.5065528942966128e-06,
+          "embedding_entropy": 8.085907463057847,
+          "consistency_score": 0.9922864491812015
+        },
+        {
+          "prompt": "What is machine learning?",
+          "n_responses": 5,
+          "mean_pairwise_distance": 0.006700264506276465,
+          "std_pairwise_distance": 0.00021089300945759668,
+          "max_pairwise_distance": 0.007179597034480123,
+          "min_pairwise_distance": 0.006445744767649586,
+          "embedding_variance": 1.3086454113821924e-06,
+          "embedding_entropy": 8.08856010209735,
+          "consistency_score": 0.9932997354937235
+        }
+      ],
+      "batch_statistics": {
+        "n_prompts": 50,
+        "mean_consistency": 0.9897213674878071,
+        "std_consistency": 0.0022105125601934797,
+        "mean_embedding_variance": 2.0075454125376802e-06,
+        "std_embedding_variance": 4.317407344127825e-07
+      }
+    }
+  },
+  "combined_scores": {
+    "individual_scores": [
+      {
+        "prompt": "Explain the Borsuk-Ulam theorem.",
+        "manifold_distance": 0.44404787077250285,
+        "consistency_score": 0.9838212310038733,
+        "normalized_scores": {
+          "manifold": 0.44404787077250285,
+          "consistency": 0.01617876899612669
+        },
+        "combined_score": 0.2606753985826274,
+        "rank": 1
+      },
+      {
+        "prompt": "Translate 'cat' into Mandarin.",
+        "manifold_distance": 0.44025051089430856,
+        "consistency_score": 0.9844213725245422,
+        "normalized_scores": {
+          "manifold": 0.44025051089430856,
+          "consistency": 0.015578627475457796
+        },
+        "combined_score": 0.25824827514337256,
+        "rank": 2
+      },
+      {
+        "prompt": "Who wrote Romeo and Juliet?",
+        "manifold_distance": 0.39802667195600083,
+        "consistency_score": 0.9897428385775164,
+        "normalized_scores": {
+          "manifold": 0.39802667195600083,
+          "consistency": 0.010257161422483563
+        },
+        "combined_score": 0.23183973887020773,
+        "rank": 3
+      },
+      {
+        "prompt": "How many angels can dance on the head of a pin?",
+        "manifold_distance": 0.3672518154762868,
+        "consistency_score": 0.9919528382698217,
+        "normalized_scores": {
+          "manifold": 0.3672518154762868,
+          "consistency": 0.008047161730178276
+        },
+        "combined_score": 0.21330696387081172,
+        "rank": 4
+      },
+      {
+        "prompt": "What did Napoleon think of Bitcoin?",
+        "manifold_distance": 0.34161357501215983,
+        "consistency_score": 0.987080832705277,
+        "normalized_scores": {
+          "manifold": 0.34161357501215983,
+          "consistency": 0.012919167294722977
+        },
+        "combined_score": 0.20074454313325835,
+        "rank": 5
+      },
+      {
+        "prompt": "What is 2 + 2?",
+        "manifold_distance": 0.33733630384586155,
+        "consistency_score": 0.9899269718741481,
+        "normalized_scores": {
+          "manifold": 0.33733630384586155,
+          "consistency": 0.010073028125851868
+        },
+        "combined_score": 0.19708061425157172,
+        "rank": 6
+      },
+      {
+        "prompt": "Explain gradient descent.",
+        "manifold_distance": 0.3375847701468925,
+        "consistency_score": 0.9913856079740089,
+        "normalized_scores": {
+          "manifold": 0.3375847701468925,
+          "consistency": 0.008614392025991124
+        },
+        "combined_score": 0.1965974652379348,
+        "rank": 7
+      },
+      {
+        "prompt": "How many moons does Mars have?",
+        "manifold_distance": 0.320851846433856,
+        "consistency_score": 0.9882808585443005,
+        "normalized_scores": {
+          "manifold": 0.320851846433856,
+          "consistency": 0.011719141455699522
+        },
+        "combined_score": 0.18836640144321753,
+        "rank": 8
+      },
+      {
+        "prompt": "How do you bake a chocolate cake?",
+        "manifold_distance": 0.3106186254893599,
+        "consistency_score": 0.9851109708567529,
+        "normalized_scores": {
+          "manifold": 0.3106186254893599,
+          "consistency": 0.014889029143247079
+        },
+        "combined_score": 0.18387736991245443,
+        "rank": 9
+      },
+      {
+        "prompt": "What is the largest planet in our solar system?",
+        "manifold_distance": 0.3131644315257125,
+        "consistency_score": 0.991724479660228,
+        "normalized_scores": {
+          "manifold": 0.3131644315257125,
+          "consistency": 0.008275520339771969
+        },
+        "combined_score": 0.18249775530316661,
+        "rank": 10
+      },
+      {
+        "prompt": "Who painted the Mona Lisa?",
+        "manifold_distance": 0.308779030152327,
+        "consistency_score": 0.9891407747958236,
+        "normalized_scores": {
+          "manifold": 0.308779030152327,
+          "consistency": 0.01085922520417637
+        },
+        "combined_score": 0.18109911374597673,
+        "rank": 11
+      },
+      {
+        "prompt": "Explain the theory of relativity.",
+        "manifold_distance": 0.3014749216143582,
+        "consistency_score": 0.988252769980781,
+        "normalized_scores": {
+          "manifold": 0.3014749216143582,
+          "consistency": 0.011747230019218957
+        },
+        "combined_score": 0.17730591093072712,
+        "rank": 12
+      },
+      {
+        "prompt": "Who is the president of the United States?",
+        "manifold_distance": 0.30084563360785765,
+        "consistency_score": 0.9921705082363126,
+        "normalized_scores": {
+          "manifold": 0.30084563360785765,
+          "consistency": 0.007829491763687413
+        },
+        "combined_score": 0.1752672871032133,
+        "rank": 13
+      },
+      {
+        "prompt": "How many dimensions are there in string theory?",
+        "manifold_distance": 0.27041265687382876,
+        "consistency_score": 0.9900347334454621,
+        "normalized_scores": {
+          "manifold": 0.27041265687382876,
+          "consistency": 0.009965266554537888
+        },
+        "combined_score": 0.15879234673698986,
+        "rank": 14
+      },
+      {
+        "prompt": "What does a unicorn eat for breakfast?",
+        "manifold_distance": 0.205960443368706,
+        "consistency_score": 0.9848468257441088,
+        "normalized_scores": {
+          "manifold": 0.205960443368706,
+          "consistency": 0.015153174255891244
+        },
+        "combined_score": 0.12418589946321398,
+        "rank": 15
+      },
+      {
+        "prompt": "What is reinforcement learning?",
+        "manifold_distance": 0.17500217577657484,
+        "consistency_score": 0.9874650644866384,
+        "normalized_scores": {
+          "manifold": 0.17500217577657484,
+          "consistency": 0.0125349355133616
+        },
+        "combined_score": 0.10537335852091205,
+        "rank": 16
+      },
+      {
+        "prompt": "What is the weather like today?",
+        "manifold_distance": 0.17682402640359585,
+        "consistency_score": 0.9903683415355654,
+        "normalized_scores": {
+          "manifold": 0.17682402640359585,
+          "consistency": 0.00963165846443459
+        },
+        "combined_score": 0.1051701544296696,
+        "rank": 17
+      },
+      {
+        "prompt": "How do you fold a four-dimensional cube?",
+        "manifold_distance": 0.1738551696535502,
+        "consistency_score": 0.9874962364492653,
+        "normalized_scores": {
+          "manifold": 0.1738551696535502,
+          "consistency": 0.012503763550734681
+        },
+        "combined_score": 0.10470456703805783,
+        "rank": 18
+      },
+      {
+        "prompt": "What is photosynthesis?",
+        "manifold_distance": 0.17299618896063385,
+        "consistency_score": 0.9896935460584757,
+        "normalized_scores": {
+          "manifold": 0.17299618896063385,
+          "consistency": 0.010306453941524296
+        },
+        "combined_score": 0.1032720168095869,
+        "rank": 19
+      },
+      {
+        "prompt": "What is the smallest country in the world?",
+        "manifold_distance": 0.17354140514220306,
+        "consistency_score": 0.9907356410203118,
+        "normalized_scores": {
+          "manifold": 0.17354140514220306,
+          "consistency": 0.009264358979688248
+        },
+        "combined_score": 0.10313695678683957,
+        "rank": 20
+      },
+      {
+        "prompt": "What color is the sound of a triangle?",
+        "manifold_distance": 0.1683869525868017,
+        "consistency_score": 0.9921921474243549,
+        "normalized_scores": {
+          "manifold": 0.1683869525868017,
+          "consistency": 0.007807852575645091
+        },
+        "combined_score": 0.09956733829630603,
+        "rank": 21
+      },
+      {
+        "prompt": "What is the chemical symbol for gold?",
+        "manifold_distance": 0.16614477350203827,
+        "consistency_score": 0.9907111688792618,
+        "normalized_scores": {
+          "manifold": 0.16614477350203827,
+          "consistency": 0.009288831120738195
+        },
+        "combined_score": 0.09892079819576681,
+        "rank": 22
+      },
+      {
+        "prompt": "What time is it?",
+        "manifold_distance": 0.16543487129600387,
+        "consistency_score": 0.9922864491812015,
+        "normalized_scores": {
+          "manifold": 0.16543487129600387,
+          "consistency": 0.007713550818798542
+        },
+        "combined_score": 0.09784001966291589,
+        "rank": 23
+      },
+      {
+        "prompt": "What is the average height of hobbits?",
+        "manifold_distance": 0.16011943206426682,
+        "consistency_score": 0.9873907071502047,
+        "normalized_scores": {
+          "manifold": 0.16011943206426682,
+          "consistency": 0.012609292849795284
+        },
+        "combined_score": 0.09690080097235046,
+        "rank": 24
+      },
+      {
+        "prompt": "What is the capital of France?",
+        "manifold_distance": 0.13373721490771617,
+        "consistency_score": 0.9907428455172057,
+        "normalized_scores": {
+          "manifold": 0.13373721490771617,
+          "consistency": 0.009257154482794294
+        },
+        "combined_score": 0.08038861758274966,
+        "rank": 25
+      },
+      {
+        "prompt": "What is the process of making bread?",
+        "manifold_distance": 0.12978142164400253,
+        "consistency_score": 0.9908002587597581,
+        "normalized_scores": {
+          "manifold": 0.12978142164400253,
+          "consistency": 0.009199741240241921
+        },
+        "combined_score": 0.07810355861381943,
+        "rank": 26
+      },
+      {
+        "prompt": "How do you organize a closet?",
+        "manifold_distance": 0.10688062513236984,
+        "consistency_score": 0.9863135601531995,
+        "normalized_scores": {
+          "manifold": 0.10688062513236984,
+          "consistency": 0.013686439846800513
+        },
+        "combined_score": 0.066940260009983,
+        "rank": 27
+      },
+      {
+        "prompt": "What is blockchain technology?",
+        "manifold_distance": 0.10926042199666142,
+        "consistency_score": 0.9919988009744016,
+        "normalized_scores": {
+          "manifold": 0.10926042199666142,
+          "consistency": 0.008001199025598371
+        },
+        "combined_score": 0.06586361215192012,
+        "rank": 28
+      },
+      {
+        "prompt": "How do you divide by zero?",
+        "manifold_distance": 0.10703963410889317,
+        "consistency_score": 0.9914572737821139,
+        "normalized_scores": {
+          "manifold": 0.10703963410889317,
+          "consistency": 0.008542726217886099
+        },
+        "combined_score": 0.06482667358417586,
+        "rank": 29
+      },
+      {
+        "prompt": "How do you write a resume?",
+        "manifold_distance": 0.10338258520737098,
+        "consistency_score": 0.9888182188705864,
+        "normalized_scores": {
+          "manifold": 0.10338258520737098,
+          "consistency": 0.011181781129413593
+        },
+        "combined_score": 0.0638679548882464,
+        "rank": 30
+      },
+      {
+        "prompt": "What is machine learning?",
+        "manifold_distance": 0.10670229390603192,
+        "consistency_score": 0.9932997354937235,
+        "normalized_scores": {
+          "manifold": 0.10670229390603192,
+          "consistency": 0.0067002645062764765
+        },
+        "combined_score": 0.06384428130613673,
+        "rank": 31
+      },
+      {
+        "prompt": "What is the recipe for pasta?",
+        "manifold_distance": 0.10073920110810919,
+        "consistency_score": 0.9886036633896739,
+        "normalized_scores": {
+          "manifold": 0.10073920110810919,
+          "consistency": 0.01139633661032613
+        },
+        "combined_score": 0.06244940203763075,
+        "rank": 32
+      },
+      {
+        "prompt": "How does a transformer model work?",
+        "manifold_distance": 0.100423936168902,
+        "consistency_score": 0.9898223053729273,
+        "normalized_scores": {
+          "manifold": 0.100423936168902,
+          "consistency": 0.010177694627072742
+        },
+        "combined_score": 0.06174697550811804,
+        "rank": 33
+      },
+      {
+        "prompt": "How do you make an invisibility potion?",
+        "manifold_distance": 0.0950160800510923,
+        "consistency_score": 0.9876158215938358,
+        "normalized_scores": {
+          "manifold": 0.0950160800510923,
+          "consistency": 0.012384178406164237
+        },
+        "combined_score": 0.05960240791755171,
+        "rank": 34
+      },
+      {
+        "prompt": "What is the taste of the number seven?",
+        "manifold_distance": 0.08743565430466838,
+        "consistency_score": 0.9921341845525853,
+        "normalized_scores": {
+          "manifold": 0.08743565430466838,
+          "consistency": 0.007865815447414715
+        },
+        "combined_score": 0.05333429479441681,
+        "rank": 35
+      },
+      {
+        "prompt": "How does a neural network work?",
+        "manifold_distance": 0.08609972754361894,
+        "consistency_score": 0.9903598550259864,
+        "normalized_scores": {
+          "manifold": 0.08609972754361894,
+          "consistency": 0.009640144974013554
+        },
+        "combined_score": 0.05333133501378807,
+        "rank": 36
+      },
+      {
+        "prompt": "What is the sound of one hand clapping?",
+        "manifold_distance": 0.08180413759899707,
+        "consistency_score": 0.9884446663024431,
+        "normalized_scores": {
+          "manifold": 0.08180413759899707,
+          "consistency": 0.011555333697556902
+        },
+        "combined_score": 0.05169750735552272,
+        "rank": 37
+      },
+      {
+        "prompt": "How do you train a deep learning model?",
+        "manifold_distance": 0.07883349407446205,
+        "consistency_score": 0.9899283708698025,
+        "normalized_scores": {
+          "manifold": 0.07883349407446205,
+          "consistency": 0.010071629130197546
+        },
+        "combined_score": 0.04936412338406297,
+        "rank": 38
+      },
+      {
+        "prompt": "What is the color of Wednesday?",
+        "manifold_distance": 0.07740495382081458,
+        "consistency_score": 0.9898682191757622,
+        "normalized_scores": {
+          "manifold": 0.07740495382081458,
+          "consistency": 0.010131780824237824
+        },
+        "combined_score": 0.04857359396513883,
+        "rank": 39
+      },
+      {
+        "prompt": "What is quantum computing?",
+        "manifold_distance": 0.07703117834476159,
+        "consistency_score": 0.9912543277321808,
+        "normalized_scores": {
+          "manifold": 0.07703117834476159,
+          "consistency": 0.008745672267819193
+        },
+        "combined_score": 0.04776596145464342,
+        "rank": 40
+      },
+      {
+        "prompt": "What is the difference between AI and ML?",
+        "manifold_distance": 0.07330888962555382,
+        "consistency_score": 0.989186462076631,
+        "normalized_scores": {
+          "manifold": 0.07330888962555382,
+          "consistency": 0.010813537923369032
+        },
+        "combined_score": 0.046525167467474635,
+        "rank": 41
+      },
+      {
+        "prompt": "What is the speed of light?",
+        "manifold_distance": 0.0741944093418686,
+        "consistency_score": 0.9920442347479805,
+        "normalized_scores": {
+          "manifold": 0.0741944093418686,
+          "consistency": 0.007955765252019464
+        },
+        "combined_score": 0.04580641901764755,
+        "rank": 42
+      },
+      {
+        "prompt": "How do you plant a garden?",
+        "manifold_distance": 0.06966440067631408,
+        "consistency_score": 0.9906078479040756,
+        "normalized_scores": {
+          "manifold": 0.06966440067631408,
+          "consistency": 0.009392152095924367
+        },
+        "combined_score": 0.0438334369990042,
+        "rank": 43
+      },
+      {
+        "prompt": "How do you make coffee?",
+        "manifold_distance": 0.07043809604837237,
+        "consistency_score": 0.9918579009882104,
+        "normalized_scores": {
+          "manifold": 0.07043809604837237,
+          "consistency": 0.008142099011789639
+        },
+        "combined_score": 0.04373981160412263,
+        "rank": 44
+      },
+      {
+        "prompt": "How do you change a tire?",
+        "manifold_distance": 0.06666183005596416,
+        "consistency_score": 0.988651544978736,
+        "normalized_scores": {
+          "manifold": 0.06666183005596416,
+          "consistency": 0.011348455021264026
+        },
+        "combined_score": 0.04295609789823553,
+        "rank": 45
+      },
+      {
+        "prompt": "How do you catch a cloud?",
+        "manifold_distance": 0.06640563417937129,
+        "consistency_score": 0.9906373909144709,
+        "normalized_scores": {
+          "manifold": 0.06640563417937129,
+          "consistency": 0.009362609085529106
+        },
+        "combined_score": 0.041958623424867496,
+        "rank": 46
+      },
+      {
+        "prompt": "How do you tie a tie?",
+        "manifold_distance": 0.061191648849910796,
+        "consistency_score": 0.9916318024586734,
+        "normalized_scores": {
+          "manifold": 0.061191648849910796,
+          "consistency": 0.00836819754132656
+        },
+        "combined_score": 0.03855302686051756,
+        "rank": 47
+      },
+      {
+        "prompt": "What is the best way to study?",
+        "manifold_distance": 0.05694723187969675,
+        "consistency_score": 0.9917816777869625,
+        "normalized_scores": {
+          "manifold": 0.05694723187969675,
+          "consistency": 0.008218322213037532
+        },
+        "combined_score": 0.03606341345112852,
+        "rank": 48
+      },
+      {
+        "prompt": "How do you build a time machine?",
+        "manifold_distance": 0.05442110963209035,
+        "consistency_score": 0.9904179455913769,
+        "normalized_scores": {
+          "manifold": 0.05442110963209035,
+          "consistency": 0.009582054408623142
+        },
+        "combined_score": 0.03520437167917584,
+        "rank": 49
+      },
+      {
+        "prompt": "What is the meaning of life?",
+        "manifold_distance": 0.05177595203485941,
+        "consistency_score": 0.9915565429988198,
+        "normalized_scores": {
+          "manifold": 0.05177595203485941,
+          "consistency": 0.00844345700118021
+        },
+        "combined_score": 0.033204882734711186,
+        "rank": 50
+      }
+    ],
+    "statistics": {
+      "mean_combined_score": 0.10448633810291877,
+      "std_combined_score": 0.06547795199109868,
+      "min_combined_score": 0.033204882734711186,
+      "max_combined_score": 0.2606753985826274,
+      "weights_used": {
+        "manifold": 0.4,
+        "consistency": 0.3,
+        "agreement": 0.3
+      }
+    }
+  }
+}
